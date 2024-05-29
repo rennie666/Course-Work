@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Алтруист</title>
+</head>
+<body>
+    <div class="main-container">
+		<header class="header-container">
+            <img src="img/finalbeige.png" alt="logo">   
+            <h1>Кафе-библиотека Алтруист</h1>
+        </header>
+   		<nav class="nav-container">
+            <ul>
+                <li><a href="#home">Начало</a></li>
+                <li><a href="#events">Събития</a></li>
+                <li><a href="#info">За нас</a></li>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+   		<section class="content-container">
+            <article class="home-container" id="home">
+            <div class="home-column">
+                <h2>Споделена мъдрост, вдъхновяващ вкус.</h2>
+            </div>
+            <div class="home-column">
+                <img src="img/coffee.png" alt="coffee">
+            </div>
+            </article>
+
+            <article class="events-container" id="events">
+                <h3>Предстоящи събития</h3>
+                <div class="event-item">
+                    <h4><a href="#">Литературна вечер</a></h4>
+                    <p>Дата: 25 юни 2024</p>
+                    <p>Описание: Вечер посветена на българската поезия с гостуващи поети.</p>
+                </div>
+                <div class="event-item">
+                    <h4><a href="#">Работилница за писане</a></h4>
+                    <p>Дата: 30 юни 2024</p>
+                    <p>Описание: Учебна работилница по креативно писане за начинаещи.</p>
+                </div>
+            </article>
+            
+
+            <article class="info-container" id="info">
+                <h3>За нас</h3>
+                <p>Кафе-библиотека Алтруист е създадено през 2024 г. с идеята да предложи уютно място за любителите на книгите и кафето. Нашата мисия е да съчетаем удоволствието от четенето с насладата от качественото кафе.</p>
+            </article>
+            
+            
+
+            <article class="menu-container" id="menu">
+                <h3>Насладете се на предложенията <br> от нашето меню</h3>
+                <img src="img/menu.png" alt="menu">
+            </article>
+
+            <article class="specials-container" id="specials">
+                <h3>Специални предложения</h3>
+                <div class="special-items">
+                <div class="special-item">
+                    <img src="img/specials1.jpg" alt="Special Offer 1">
+                    <p>Макиато - 4.60 лв</p>
+                </div>
+                <div class="special-item">
+                    <img src="img/specials2.jpg" alt="Special Offer 2">
+                    <p>Ябълков пай - 4.80 лв</p>
+                </div>
+                </div>
+            </article>
+            
+
+            <article class="contacts-container" id="contacts">
+                <h3>Работно време</h3>
+                <p>понеделник - петък: 8:00 - 17:00 <br>
+                събота - неделя: 9:00 - 15:00
+                </p>
+                <h3>Адрес</h3>
+                <p>ул. "Богомил" №15, гр. Пловдив
+                </p>
+                <h3>Свържете се с нас</h3>
+                <p>+359 887 364 328 <br>
+                    Instagram: @altruist.plovdiv</p>
+            </article>
+
+            <section>
+                <h2>Често задавани въпроси</h2>
+                <div class="faq">
+                    <button type="button" onclick="toggleFAQ(this)">Какви книги предлагате?</button>
+                    <div class="collapse">
+                        <p>Предлагаме широк спектър от книги, включително художествена литература, нехудожествена литература, класически произведения, съвременни романи, биографии, научна фантастика и детски книги. Стараем се да поддържаме разнообразен избор, който да отговаря на интересите на нашите посетители.</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <button type="button" onclick="toggleFAQ(this)">Приемате ли дарения на книги?</button>
+                    <div class="collapse">
+                        <p>Да, с радост приемаме дарения на книги, които са в добро състояние. При всяко дарение на книга ще получите безплатно кафе по избор!</p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <button type="button" onclick="toggleFAQ(this)">Имате ли някакви събития или клубове?</button>
+                    <div class="collapse">
+                        <p>Да, организираме различни събития като литературни вечери, срещи с автори, книжни клубове и работилници. Можете да се запишете за нашия бюлетин или да ни следвате в социалните мрежи, за да сте в течение с предстоящите събития.</p>
+                    </div>
+                </div>
+            </section>
+    </section>
+    <aside class="sidebar-container">
+        <a href="#">
+        <img src="img/book_cover.jpg" alt="book cover">
+        <h2>Най-четена книга от нашата библиотека за месец април.</h2>
+        </a>
+    </aside>
+    <div class="ads">
+        <h2>Запишете се за седмичните ни имейли със събития и промоции!</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Въведете имейл адрес" required>
+                <button type="submit">Запиши се</button>
+            </div>
+        </form>
+        
+    </div>
+    
+      
+	</div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="#"><img src="img/instagram-icon.webp" alt="Instagram"></a>
+                <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
+            </div>
+            <p>&copy; 2024 Алтруист. Всички права запазени.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(button) {
+    const collapse = button.nextElementSibling;
+    collapse.classList.toggle('show');
+}
+    </script>
+</body>
+</html>

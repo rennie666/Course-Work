@@ -1,0 +1,570 @@
+@font-face {
+  font-family: myFont;
+  src: url(neumann/td-neumann.otf);
+}
+
+body {
+  font-family: myFont;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  color: #fff4dd;
+}
+
+.header-container {
+  grid-area: hed;
+
+  display: inline-flex;
+  font-size: small;
+}
+
+.footer-container {
+  grid-area: fot;
+
+  padding: 10px;
+  text-align: center;
+}
+
+.content-container {
+  grid-area: main;
+  text-align: center;
+}
+
+.sidebar-container {
+  grid-area: side;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-items: center;
+  text-align: center;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #4c6444;
+  border-radius: 10%;
+  margin: 10%;
+  padding: 5%;
+
+  transition: transform 0.2s;
+}
+
+.nav-container {
+  grid-area: nav;
+
+  background-color: #4c6444;
+  position: sticky;
+  top: 0px;
+  text-align: center;
+  padding: 1.5%;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hed"
+    "nav"
+    "main"
+    "side"
+    "ads"
+    "fot";
+  grid-gap: 1em;
+
+  background-color: #102820;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+}
+
+.header-container img {
+  width: 17%;
+  height: auto;
+}
+
+.header-container h1 {
+  font-family: myFont;
+  flex-wrap: wrap;
+  padding-top: 3%;
+  align-self: center;
+}
+
+.nav-container ul {
+  list-style: none;
+  margin: 0;
+}
+
+.nav-container li {
+  display: inline;
+  font-size: 1rem;
+  padding: 2%;
+}
+
+.nav-container a {
+  color: #fff4dd;
+  text-decoration: none;
+}
+
+.nav-container a:hover {
+  color: #bb8e67;
+  text-decoration: none;
+}
+
+.home-container {
+  display: grid;
+  grid-gap: 7%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.home-column {
+  text-align: center;
+  align-self: center;
+}
+
+.home-column h2 {
+  font-size: 1.7rem;
+}
+
+.home-column img {
+  width: 90%;
+}
+
+.events-container {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #4c6444;
+  border-radius: 10%;
+  margin: 10%;
+  padding: 5%;
+}
+
+.event-item {
+  margin-bottom: 15px;
+}
+
+.events-container h3 {
+  font-size: 1.6rem;
+}
+
+.event-item h4 {
+  font-size: 1.5rem;
+  color: #bb8e67;
+}
+
+.event-item p {
+  font-size: 1rem;
+}
+
+.events-container a {
+  color: #bb8e67;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.events-container a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.events-container h4 {
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+}
+
+.events-container p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.info-container {
+  font-size: large;
+  padding: 7%;
+}
+
+.menu-container {
+  align-items: center;
+}
+
+.menu-container img {
+  width: 80%;
+}
+
+.specials-container {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+  margin: 0 20%;
+}
+
+.special-item img {
+  width: 80%;
+  height: auto;
+  border-radius: 20%;
+}
+
+.special-item {
+  background-color: #4c6444;
+  padding-top: 5%;
+  margin: 5%;
+  border-radius: 15%;
+}
+.special-item p {
+  padding-bottom: 5%;
+}
+
+.faq {
+  margin-bottom: 1em;
+}
+
+.faq button {
+  width: 80%;
+  text-align: left;
+  background-color: #4c6444;
+  color: #fff4dd;
+  padding: 1em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.faq button:hover {
+  background-color: #bb8e67;
+}
+
+.faq .collapse {
+  display: none;
+  background-color: #102820;
+  color: #fff4dd;
+  padding: 1em;
+}
+
+.faq .collapse.show {
+  display: block;
+}
+
+.sidebar-container img {
+  width: 60%;
+  padding: 10%;
+}
+
+.sidebar-container a {
+  font-size: 1rem;
+  color: #fff4dd;
+  text-decoration: none;
+}
+
+.sidebar-container:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ads {
+  margin: 50px auto;
+  background-color: #4c6444;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ads h2 {
+  font-size: 1rem;
+}
+
+.form-group {
+  display: flex;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #102820;
+  color: #fff4dd;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.footer-container{
+  background-color: #102820;
+}
+
+.footer-container p {
+  font-size: 1rem;
+}
+
+.social-icons img {
+  width: 10%;
+  margin: 2% 5%;
+}
+
+
+@media only screen and (min-width: 576px) {
+  .header-container h1 {
+    font-size: 1.7rem;
+  }
+
+  .header-container img {
+    width: 15%;
+  }
+
+  .home-column h2 {
+    font-size: 2.2rem;
+  }
+
+  .menu-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .specials-container {
+    font-size: 1.35rem;
+  }
+
+  .sidebar-container img {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "hed hed"
+      "nav nav"
+      "main main"
+      "side ads"
+      "fot fot";
+  }
+
+  .header-container h1 {
+    font-size: 2rem;
+  }
+
+  .nav-container li {
+    font-size: 1.3rem;
+  }
+  .home-column h2 {
+    font-size: 2.5rem;
+  }
+
+  .info-container {
+    font-size: 1.5rem;
+  }
+
+  .menu-container h3 {
+    font-size: 1.7rem;
+  }
+
+  .contacts-container {
+    font-size: 1.2rem;
+  }
+
+  .ads {
+    height: 20%;
+    align-self: center;
+  }
+
+  .footer-container {
+    font-size: 1.4rem;
+  }
+
+  .social-icons img {
+    width: 4%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main-container {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      "hed hed hed"
+      "nav main side"
+      "nav main ads"
+      "fot fot fot";
+  }
+
+  .header-container img {
+    width: 7%;
+    height: auto;
+  }
+
+  .header-container h1 {
+    padding: 0;
+    font-size: 1.4rem;
+  }
+
+  .nav-container {
+    height: 14%;
+    background-color: none;
+  }
+
+  .nav-container ul {
+    padding: 0;
+  }
+
+  .nav-container li {
+    font-size: 1rem;
+    display: block;
+    padding: 20% 0;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #4c6444;
+  }
+
+  .nav-container li:hover {
+    background-color: #102820;
+  }
+
+  .home-column img {
+    width: 100%;
+  }
+
+  .events-container {
+    font-size: 1.4rem;
+  }
+
+  .info-container {
+    font-size: 1.3rem;
+  }
+
+  .menu-container h3 {
+    font-size: 1.7rem;
+  }
+
+  .specials-container {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  .special-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .special-item p {
+    font-size: 1rem;
+  }
+
+  .contacts-container {
+    font-size: 1rem;
+  }
+
+  .sidebar-container {
+    height: 30%;
+    align-items: start;
+  }
+  .sidebar-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .sidebar-container img {
+    width: 70%;
+    padding: 5% 0;
+  }
+
+  .ads {
+    align-self: self-end;
+    height: 10%;
+  }
+
+  .footer-container {
+    font-size: 1.2rem;
+  }
+
+  
+}
+
+@media only screen and (min-width: 1200px) {
+  .header-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-container img {
+    width: 8rem;
+    height: auto;
+  }
+
+  .home-column h2 {
+    font-size: 3.2rem;
+  }
+  .home-column img {
+    width: 100%;
+  }
+
+  .nav-container li {
+    font-size: 1.6rem;
+  }
+
+  .info-container {
+    font-size: 1.8rem;
+  }
+
+  .menu-container h3 {
+    font-size: 2.2rem;
+  }
+
+  .specials-container {
+    font-size: 2rem;
+  }
+
+  .special-items p {
+    font-size: 1.4rem;
+  }
+
+  .contacts-container {
+    font-size: 1.6rem;
+  }
+
+  .sidebar-container {
+    height: 25%;
+  }
+
+  .footer-container {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .events-container {
+    font-size: 2rem;
+  }
+
+  .events-container a {
+    font-size: 1.7rem;
+  }
+
+  .events-container p {
+    font-size: 1.6rem;
+  }
+
+  .nav-container li {
+    font-size: 1.8rem;
+  }
+
+  .info-container {
+    font-size: 2rem;
+  }
+
+  .special-items p {
+    font-size: 1.5rem;
+  }
+
+  .contacts-container {
+    font-size: 1.8rem;
+  }
+
+  .sidebar-container {
+    height: 20%;
+  }
+
+  .sidebar-container img {
+    width: 80%;
+  }
+}
